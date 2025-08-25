@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recipe Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <!-- Recipe Header -->
+            <div class="recipe-header">
+                <h1 class="recipe-title">Chocolate Lava Cake</h1>
+                <div class="recipe-image">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop" alt="Chocolate Lava Cake">
+                </div>
+            </div>
+
+            <!-- Recipe Info -->
+            <div class="recipe-info">
+                <div class="info-item">
+                    <span class="info-label">Prep Time:</span>
+                    <span class="info-value">15 min</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Cook Time:</span>
+                    <span class="info-value">12 min</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Servings:</span>
+                    <span class="info-value">4</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                <span class="progress-text" id="progressText">Ready to start</span>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div class="section-container">
+                <button class="section-toggle" id="ingredientsToggle">
+                    <span>Show Ingredients</span>
+                    <span class="toggle-icon">▼</span>
+                </button>
+                <div class="section-content hidden" id="ingredientsContent">
+                    <ul class="ingredients-list">
+                        <li class="ingredient">4 oz dark chocolate, chopped</li>
+                        <li class="ingredient">4 tbsp unsalted butter</li>
+                        <li class="ingredient">2 large eggs</li>
+                        <li class="ingredient">2 tbsp granulated sugar</li>
+                        <li class="ingredient">2 tbsp all-purpose flour</li>
+                        <li class="ingredient">Pinch of salt</li>
+                        <li class="ingredient">Butter for ramekins</li>
+                        <li class="ingredient">Cocoa powder for dusting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Steps Section -->
+            <div class="section-container">
+                <button class="section-toggle" id="stepsToggle">
+                    <span>Show Instructions</span>
+                    <span class="toggle-icon">▼</span>
+                </button>
+                <div class="section-content hidden" id="stepsContent">
+                    <div class="steps-list">
+                        <div class="step" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Preheat oven to 425°F. Butter four 6-oz ramekins and dust with cocoa powder.</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Melt chocolate and butter in a double boiler until smooth. Let cool slightly.</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Whisk eggs and sugar until thick and pale, about 3 minutes.</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Fold in melted chocolate mixture, then add flour and salt.</div>
+                        </div>
+                        <div class="step" data-step="5">
+                            <div class="step-number">5</div>
+                            <div class="step-text">Divide batter among ramekins and bake for 12-14 minutes.</div>
+                        </div>
+                        <div class="step" data-step="6">
+                            <div class="step-number">6</div>
+                            <div class="step-text">Let cool for 1 minute, then run knife around edges and invert onto plates.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button class="btn btn-primary" id="startCookingBtn">Start Cooking</button>
+                <button class="btn btn-secondary hidden" id="nextStepBtn">Next Step</button>
+                <button class="btn btn-secondary hidden" id="resetBtn">Reset</button>
+            </div>
+
+            <!-- Timer Display -->
+            <div class="timer hidden" id="timer">
+                <div class="timer-display" id="timerDisplay">27:00</div>
+                <div class="timer-label">Total Time Remaining</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
